@@ -6,7 +6,7 @@ TARGET=pwdump.exe
 
 all:$(TARGET) 
 CC=x86_64-w64-mingw32-gcc
-WINDRES =x86_64-w64-mingw32-windres
+
 
 #STD = -std=c99
 
@@ -58,8 +58,8 @@ $(TARGET):$(APP_OBJS)
 	$(CC) $(CFLAGS) $(LIBS) $(APP_OBJS) -o $(TARGET) $(LDFLAGS)
 
 
-install:
-	$(NINS) installer.nsi
+
+
 clean:
 	rm -f *.o $(TARGET) 
 	
